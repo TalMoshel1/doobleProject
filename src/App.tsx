@@ -4,6 +4,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import SearchBar from "./components/Header/SearchBar";
 import NewsBar from "./components/Header/NewsBar";
+import HeroSlider from "./components/HeroSlider/HeroSlider";
 function App() {
   return (
     <>
@@ -11,7 +12,10 @@ function App() {
         <Nav />
       </Header>
       <SearchBar />
-      <NewsBar />
+      <div style={{position:'relative'}}>
+        <NewsBar />
+        <HeroSlider />
+      </div>
     </>
   );
 }

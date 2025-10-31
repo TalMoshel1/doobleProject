@@ -1,17 +1,16 @@
 @use "../../styles/abstracts/variables" as *;
 
 .newsBar {
+  position:absolute;
+  top:0;
+  z-index:1;
   width: 100%;
   height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  background: linear-gradient(
-    to left,
-    rgba(69, 42, 122, 1) 0%,
-    rgba(69, 42, 122, 0.5) 95%
-  );
+  background: rgba(69, 42, 122, 1);
 
   h1 {
     font-size: 1.125rem;
@@ -86,6 +85,11 @@
   }
 
   .newsBar {
+      background: linear-gradient(
+    to left,
+    rgba(69, 42, 122, 1) 0%,
+    transparent 95%
+  );
     span {
       margin-inline: 1.5rem;
     }

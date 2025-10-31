@@ -58,14 +58,26 @@
 }
 
 
-@media (orientation: landscape) and (min-width: 520px) {
+// @media (orientation: landscape) and (min-width: 668px) {
+//   .buttonsSearchBar {
+//       margin-inline-start: 0.5rem;
+
+// }
+
+// .searchBar { 
+//     padding-inline-end: 1rem;
+//   padding-inline-start: 1rem;
+// }
+// }
+
+@media (orientation: landscape) {
   .buttonsSearchBar {
       margin-inline-start: 0.5rem;
 
 }
 
 .searchBar { 
-    padding-inline-end: 0.9rem;
-  padding-inline-start: 0.9rem;
+    padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
 }
 }
