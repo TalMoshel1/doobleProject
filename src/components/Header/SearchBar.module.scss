@@ -5,15 +5,15 @@
   height: 6.25rem;
   display: flex;
   justify-content: space-between;
-  background-color: $color-header-bg !important;
+  background-color: $color-theme !important;
   padding-inline: 0.5rem;
-  
+  position:relative
 }
 
 .searchInput {
   width: 100%;
   height: 100%;
-  background-color: $color-header-bg;
+  background-color: $color-theme;
   border-color: transparent;
   font-size: 1.5rem;
   // padding-right: 1rem;
@@ -21,7 +21,7 @@
 
   &::placeholder {
     font-weight: 400;
-    color: $color-navbar-links;
+    color: $color-primary;
     font-size: 1.5rem;
   }
 }
@@ -33,51 +33,55 @@
 }
 
 .buttonsSearchBar {
-  background-color: $color-header-bg;
-  border:none;
+  background-color: $color-theme;
+  border: none;
   cursor: pointer;
   position: relative;
   width: fit-content;
-  padding:0;
+  padding: 0;
   padding-inline-start: 2rem;
+
+  &:focus {
+    /* use outline so the ring is drawn with the native outline mechanism
+       add !important as a fallback to override global outline-color rules */
+    outline: 2px solid $color-secondary !important;
+    outline-offset: 2px !important;
+    border-radius: 4px;
+  }
 }
 
 .cleanSearch {
-  color: $color-navbar-links;
+  color: $color-primary;
   width: 2.65125rem;
   outline-color: transparent;
 }
 .SearchIconInBar {
-  color: $color-green-searchIcon-searchBar;
+  color: $color-secondary;
   width: 2.65125rem;
   background-color: transparent !important;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+        &:focus-visible {
+          outline: 2px solid $color-secondary !important;
+          outline-offset: 2px !important;
+          border-radius: 50%;
+        }
+  
+
+
 }
 
-
-// @media (orientation: landscape) and (min-width: 668px) {
-//   .buttonsSearchBar {
-//       margin-inline-start: 0.5rem;
-
-// }
-
-// .searchBar { 
-//     padding-inline-end: 1rem;
-//   padding-inline-start: 1rem;
-// }
-// }
 
 @media (orientation: landscape) {
   .buttonsSearchBar {
-      margin-inline-start: 0.5rem;
+    margin-inline-start: 0.5rem;
+  }
 
-}
-
-.searchBar { 
+  .searchBar {
     padding-inline-end: 1rem;
-  padding-inline-start: 1rem;
-}
+    padding-inline-start: 1rem;
+  }
 }

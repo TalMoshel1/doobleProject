@@ -1,0 +1,153 @@
+@use "../../styles/abstracts/variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (orientation: landscape) and (min-width: 668px) {
+    width: 100%;
+  }
+}
+
+.mainHeading {
+  font-weight: 700;
+  color: $color-primary;
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+
+  @media (orientation: landscape) and (min-width: 668px) {
+    font-size: 3.375rem;
+      margin-bottom: 7rem;
+
+  }
+}
+
+.branchesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (orientation: landscape) and (min-width: 668px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+  }
+}
+
+.branchItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  // width: 23.4375rem;
+  @media (orientation: landscape) and (min-width: 668px) {
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &:hover .branchTitle {
+        &:focus {
+    outline-color: $color-primary;
+    --outline-offset: $outline-offset;
+  }
+  }
+}
+.branchHeaderContainer {
+  width: 100%;
+  background-color: $color-theme;
+  position: absolute;
+  top: -1px;
+}
+
+.branchHeader {
+  width: fit-content;
+  margin-inline-start: 1rem;
+  margin-block-start: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  direction: rtl;
+  margin-bottom: 1rem;
+  border-inline-start: 0.1rem solid $color-primary-more-lighter;
+
+  @media (orientation: landscape) and (min-width: 668px) {
+    justify-content: center;
+    margin-inline-start: 0rem;
+    margin-block-start: 0rem;
+  }
+}
+
+.branchNumber {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-primary-lighter);
+  text-align: start;
+  font-family: Poppins, sans-serif;
+  padding-inline-start: 1rem;
+
+  @media (orientation: landscape) {
+      padding-inline-start: 2rem;
+
+  }
+}
+
+.branchAndTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; // במקום margin-inline-start על האייקון
+  padding-inline-start: 1rem;
+
+    @media (orientation: landscape) {
+      padding-inline-start: 2rem;
+
+  }
+}
+
+.branchTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: $color-primary;
+  line-height: 1;
+  display: inline;
+  margin-block: 0;
+
+  @media (orientation: landscape) and (min-width: 668px) {
+    font-size: 3rem;
+  }
+}
+
+.forwardIcon {
+  font-size: 1.2rem;
+  color: $color-primary;
+  align-self: center;
+
+  margin-top: 0.2rem;
+
+  @media (orientation: landscape) and (min-width: 668px) {
+    display: none;
+  }
+}
+
+.branchImage {
+  aspect-ratio: 1/1;
+  height: auto;
+  object-fit: cover;
+
+  @media (orientation: landscape) and (min-width: 668px) {
+    height: 25.5625rem;
+  }
+}
+
+html[dir="ltr"] .forwardIcon {
+  transform: rotate(180deg); // הופך את החץ לצד הנכון
+}

@@ -6,15 +6,27 @@ interface AppButtonProps {
   label: string;
   to: string;
   ariaLabel?: string;
+  color?: "primary" | "secondary"; 
 }
 
-export default function AppButton({ label, to, ariaLabel }: AppButtonProps) {
+export default function AppButton({
+  label,
+  to,
+  ariaLabel,
+  color = "secondary",
+}: AppButtonProps) {
   return (
-    // <Link to={to} className={styles.button} aria-label={ariaLabel ?? label}>
-    //   <IoIosArrowBack aria-hidden="true" focusable="false" className={styles.icon} />
-    //   <span>{label}</span>
-    // </Link>
-    <>
-    </>
+    <Link
+      to={to}
+      aria-label={ariaLabel ?? label}
+      className={`${styles.button} ${styles[color]}`}
+    >
+      <span>{label}</span>
+      <IoIosArrowBack
+        aria-hidden="true"
+        focusable="false"
+        className={styles.icon}
+      />
+    </Link>
   );
 }

@@ -24,7 +24,7 @@ type I18nProviderProps = {
 
 const STORAGE_KEY = 'locale';
 
-export function I18nProvider({ children, defaultLocale = 'en' }: I18nProviderProps) {
+export function I18nProvider({ children, defaultLocale = 'he' }: I18nProviderProps) {
   const [locale, setLocaleState] = useState<Locale>(() => {
     if (typeof window === 'undefined') return defaultLocale;
     console.log(defaultLocale)

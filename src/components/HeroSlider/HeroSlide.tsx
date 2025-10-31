@@ -38,7 +38,7 @@ export default function HeroSlide({
           {slide.description && (
             <p className={styles.description}>{slide.description}</p>
           )}
-          <AppButton label="לפרטים נוספים" to="/" />
+          <AppButton label="לפרטים נוספים" color='secondary' to="/" />
 
         </div>
       </div>

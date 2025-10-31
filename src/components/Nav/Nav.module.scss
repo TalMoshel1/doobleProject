@@ -17,7 +17,7 @@
 
 .headerNavLinks a {
 
-  color: var(--color-navbar-links);
+  color: $color-primary;
   width: fit-content;
   font-weight: 700;
   font-size:1.3125rem;
@@ -26,7 +26,7 @@
   // outline-color: color-navbar-icons;
   height:fit-content;
     &:focus {
-    outline-color: $color-navbar-links;
+    outline-color: $color-primary;
     --outline-offset: $outline-offset;
   }
 }

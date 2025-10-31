@@ -41,7 +41,11 @@
 .content {
   text-align: center;
   color: #fff;
-padding: 1.25rem
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-inline:auto;
 }
 
 .title {
@@ -54,10 +58,10 @@ padding: 1.25rem
 
 .subtitle {
   text-align: start;
-  margin-top:0.625rem;
+  margin-top: 0.625rem;
   font-size: 1.875rem;
   line-height: 1.6;
-  font-weight:700;
+  font-weight: 700;
 }
 
 .description {
@@ -67,8 +71,7 @@ padding: 1.25rem
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.9);
   text-align: start;
-  margin-top:1.875rem;
-
+  margin-top: 1.875rem;
 }
 
 .image {
@@ -91,10 +94,8 @@ padding: 1.25rem
   justify-content: center;
 }
 
-
 .button {
   display: inline-block;
-  background-color: $primary-color;
   color: #fff;
   text-decoration: none;
   padding: 0.8rem 2.2rem;
@@ -104,26 +105,24 @@ padding: 1.25rem
 
   &:hover,
   &:focus {
-    background-color: $primary-hover;
+    // background-color: $primary-hover;
   }
 }
 
-/* ----------------------------- Controls ----------------------------- */
 .controlsContainer {
   position: absolute;
-  bottom: 2vh;
+  bottom: 2.5625rem;
   right: 50%;
   transform: translateX(50%);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.875rem;
   z-index: 2;
 }
 
-/* ----------------------------- Dots ----------------------------- */
 .dots {
   display: flex;
-  gap: 1rem;
+  gap: 1.875rem;
 }
 
 .dot {
@@ -136,11 +135,14 @@ padding: 1.25rem
   transition: background-color 0.3s ease-in-out;
 
   &.active {
-    background-color: $primary-color;
+    transform: scale(1.1);
+
+    background-color: $color-theme;
   }
 
-  &:focus {
-    outline: 0.2rem solid $primary-color;
+  &:focus,
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -154,24 +156,29 @@ padding: 1.25rem
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+  padding:0;
 
   &:hover,
   &:focus {
     transform: scale(1.1);
-    color: $primary-color;
-    outline: none;
+    color: $color-theme;
+    outline: 1px solid $color-theme;
   }
 }
 
 .pauseIcon {
   pointer-events: none;
   display: block;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
-
 @media (orientation: landscape) and (min-width: 520px) {
+
+  .content {
+    max-width: 62.625rem;
+
+  }
   .title {
     font-size: 3.75rem;
   }
@@ -187,30 +194,13 @@ padding: 1.25rem
 
   .heroSlider {
     height: 41.375rem;
+  }
 }
-}
-
-// @media (orientation: landscape) and (min-width: 1024px) {
-//   .title {
-//     font-size: 4.5rem;
-//   }
-
-//   .subtitle {
-//     font-size: 3.5rem;
-//   }
-
-//   .button {
-//     font-size: 1.5rem;
-//     padding: 1.2rem 3rem;
-//   }
-
-//   .heroSlider {
-//   // height: 80vh;
-// }
-// }
 
 @media (orientation: landscape) and (max-width: 700px) {
   .heroSlider {
-  height: 90vw;
-}
+        height: 41.375rem;
+
+    // height: 90vw;
+  }
 }

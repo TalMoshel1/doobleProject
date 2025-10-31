@@ -9,11 +9,11 @@
     display: inline-block;
     width: fit-content;
     background-color: transparent;
-    color: $color-header-icons;
+    color: $color-primary;
     font-weight: 700;
     font-size: 1.3125rem;
     padding: 0.25rem;
-    outline-color: $color-navbar-links;
+    outline-color: $color-primary;
      --outline-offset: $outline-offset;
   }
 }

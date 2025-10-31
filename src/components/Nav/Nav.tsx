@@ -1,31 +1,32 @@
+import { Link } from "react-router-dom";
 import styles from "./Nav.module.scss";
 
 export default function Nav() {
   return (
-    <nav className={styles.headerNavLinks} aria-label="" title="">
-      <a
+    <nav className={styles.headerNavLinks} aria-label="ניווט ראשי" title="Main Navigation">
+      <Link
         aria-label="insurance branches"
-        href="/insurance-branches"
+        to="/insurance-branches"
         className={styles.navLink}
       >
         ענפי ביטוח
-      </a>
+      </Link>
 
-      <a aria-label="ABOUT US" href="/about" className={styles.navLink}>
+      <Link aria-label="ABOUT US" to="/about" className={styles.navLink}>
         אודות
-      </a>
+      </Link>
 
-      <a href="/news" className={styles.navLink} aria-label="WHATS NEW">
+      <Link to="/news" className={styles.navLink} aria-label="WHATS NEW">
         מה חדש?
-      </a>
+      </Link>
 
-      <a
+      <Link
         aria-label="customer-service"
-        href="/customer-service"
+        to="/customer-service"
         className={styles.navLink}
       >
         שירות לקוחות
-      </a>
+      </Link>
     </nav>
   );
 }

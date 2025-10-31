@@ -67,6 +67,7 @@ export default function HeroSlider() {
       ))}
 
       <div className={styles.controlsContainer}>
+        
               <button
           type="button"
           className={styles.pauseButton}
@@ -74,9 +75,9 @@ export default function HeroSlider() {
           onClick={togglePlay}
         >
           {isPlaying ? (
-            <FiPauseCircle className={styles.pauseIcon} size={"1.25rem"} />
+            <FiPauseCircle className={styles.pauseIcon}  />
           ) : (
-            <FiPlayCircle className={styles.pauseIcon} size={"1.25rem"} />
+            <FiPlayCircle className={styles.pauseIcon} />
           )}
         </button>
         <div
