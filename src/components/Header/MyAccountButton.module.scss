@@ -1,0 +1,15 @@
+@use "../../styles/abstracts/variables" as *;
+
+.myAccountButton {
+  width: fit-content;
+  background-color:transparent;
+  color:white;
+  font-weight: 700;
+  font-size:1.3125rem;
+  padding: 0.25rem;
+  outline-color: transparent !important;
+   --outline-offset: $outline-offset;
+  
+}
+
+

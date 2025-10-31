@@ -1,0 +1,19 @@
+@use "../../styles/abstracts/variables" as *;
+
+.languageButton {
+  display: none;
+}
+
+@media (orientation: landscape) and (min-width: 480px) {
+  .languageButton {
+    display: inline-block;
+    width: fit-content;
+    background-color: transparent;
+    color: $color-header-icons;
+    font-weight: 700;
+    font-size: 1.3125rem;
+    padding: 0.25rem;
+    outline-color: $color-navbar-links;
+     --outline-offset: $outline-offset;
+  }
+}

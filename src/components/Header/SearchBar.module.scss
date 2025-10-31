@@ -1,0 +1,71 @@
+@use "../../styles/abstracts/variables" as *;
+
+.searchBar {
+  width: 100%;
+  height: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-header-bg !important;
+  padding-inline: 0.5rem;
+  
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  background-color: $color-header-bg;
+  border-color: transparent;
+  font-size: 1.5rem;
+  // padding-right: 1rem;
+  line-height: 2rem;
+
+  &::placeholder {
+    font-weight: 400;
+    color: $color-navbar-links;
+    font-size: 1.5rem;
+  }
+}
+
+.searchInput::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.buttonsSearchBar {
+  background-color: $color-header-bg;
+  border:none;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+  padding:0;
+  padding-inline-start: 2rem;
+}
+
+.cleanSearch {
+  color: $color-navbar-links;
+  width: 2.65125rem;
+  outline-color: transparent;
+}
+.SearchIconInBar {
+  color: $color-green-searchIcon-searchBar;
+  width: 2.65125rem;
+  background-color: transparent !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media (orientation: landscape) and (min-width: 520px) {
+  .buttonsSearchBar {
+      margin-inline-start: 0.5rem;
+
+}
+
+.searchBar { 
+    padding-inline-end: 0.9rem;
+  padding-inline-start: 0.9rem;
+}
+}
