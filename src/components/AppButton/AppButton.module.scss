@@ -1,0 +1,44 @@
+@use "../../styles/abstracts/variables" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  direction: rtl;
+  color: #fff;
+  background-color: $primary-color;
+  transition: background-color 0.25s ease-in-out, transform 0.15s ease-in-out;
+  height: 3.125rem;
+
+  padding-inline: 2rem;
+  min-width: 11.2rem; // mobile default (~179px)
+
+  @media (min-width: 768px) {
+    min-width: 12.3rem; // desktop (~197px)
+  }
+
+//   &:hover {
+//     background-color: darken($primary-color, 8%);
+//   }
+
+  &:focus-visible {
+    // outline: 0.2rem solid rgba(255, 255, 255, 0.7);
+    // outline-offset: 0.2rem;
+  }
+
+  &:active {
+    // transform: scale(0.97);
+  }
+}
+
+.icon {
+  font-size: 1.2rem;
+}

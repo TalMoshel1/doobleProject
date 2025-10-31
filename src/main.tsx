@@ -13,6 +13,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <I18nProvider defaultLocale="he">
       <ThemeProvider>
+        
         <App />
       </ThemeProvider>
     </I18nProvider>

@@ -1,4 +1,5 @@
 import styles from "./HeroSlider.module.scss";
+import AppButton from "../AppButton/AppButton";
 
 type Slide = {
   id: number;
@@ -37,9 +38,8 @@ export default function HeroSlide({
           {slide.description && (
             <p className={styles.description}>{slide.description}</p>
           )}
-          <a href={slide.link} className={styles.button}>
-            {slide.buttonText}
-          </a>
+          <AppButton label="לפרטים נוספים" to="/" />
+
         </div>
       </div>
     </article>
