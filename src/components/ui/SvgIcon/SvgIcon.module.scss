@@ -1,0 +1,68 @@
+@use "@/styles/abstracts/variables" as *;
+
+/* === בסיס כללי === */
+.img {
+  /* גודל — נקבע לפי משתנים חיצוניים */
+  width: var(--img-width, auto);
+  height: var(--img-height, auto);
+
+  /* צבע — אם לא הוגדר, ישתמש בצבע נוכחי */
+  color: var(--icon-color, currentColor);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  outline-offset: $outline-offset;
+
+  /* סמן אינטראקטיבי */
+  &:hover {
+    cursor: pointer;
+  }
+
+  /* ✅ דריסה מוחלטת של צבעים פנימיים בתוך ה־SVG */
+  svg,
+  svg * {
+    fill: currentColor !important;
+    stroke: currentColor !important;
+    color: currentColor !important;
+    width: 100%;
+    height: 100%;
+    transition: fill 0.25s ease, stroke 0.25s ease;
+  }
+}
+
+/* === צבעים לפי CSS Variables === */
+.primary {
+  --icon-color: #{$color-primary};
+}
+
+.primary-darker {
+  --icon-color: #{$color-primary-darker};
+}
+
+.primary-lighter {
+  --icon-color: #{$color-primary-lighter};
+}
+
+.primary-more-lighter {
+  --icon-color: #{$color-primary-more-lighter};
+}
+
+.secondary {
+  --icon-color: #{$color-secondary};
+}
+
+.secondary-darker {
+  --icon-color: #{$color-secondary-darker};
+}
+
+.theme {
+  --icon-color: #{$color-theme};
+}
+
+/* === מצב DEBUG === */
+.debug {
+  outline: 2px dashed magenta;
+  outline-offset: 2px;
+}

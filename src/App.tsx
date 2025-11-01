@@ -6,6 +6,8 @@ import SearchBar from "./components/Header/SearchBar";
 import NewsBar from "./components/Header/NewsBar";
 import HeroSlider from "./components/HeroSlider/HeroSlider";
 import Insurances from "./components/Insurences/Insurances";
+import FastServices from "./components/FastServices/mobile/FastServices";
+import FastServicesDesktop from "./components/FastServices/desktop/FastServicesDesktop";
 function App() {
   return (
     <>
@@ -15,12 +17,12 @@ function App() {
       <SearchBar />
       <div className="heroWrapper">
         <NewsBar />
-  <HeroSlider />
+        <HeroSlider />
       </div>
-                    <Insurances />
-
-
-
+      {/* <FastServices /> */}
+      <Insurances />
+      <FastServices />
+      <FastServicesDesktop />
     </>
   );
 }

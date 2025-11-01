@@ -1,0 +1,84 @@
+// =============================================
+// 📸 IMAGE TOKENS (component-scoped)
+// ברירת מחדל: MOBILE
+// מתעדכן אוטומטית במדיה קווריס (landscape + min-width: 680px)
+// =============================================
+
+:root {
+  // 🔹 רדיוס
+  --radius-whats-new: 0.375rem;
+
+  // 🧩 NEWS — יש שתי מידות בלבד: main ו-secondary
+  --width-news-main: 20.935625rem;
+  --height-news-main: 13.82375rem;
+
+  --width-news-secondary: 9.1875rem;
+  --height-news-secondary: 6.305rem;
+
+  // 🌾 GALLERY — גודל אחיד
+  --width-gallery: 9.58125rem;
+  --height-gallery: 10.269375rem;
+
+  // 🌿 BRANCHES — גודל אחיד
+  --width-branches: 23.4375rem;
+  --height-branches: 30.3125rem;
+
+  // 🏞️ HERO — גודל אחיד
+  --width-hero: 41.6875rem;
+  --height-hero: 18.8125rem;
+
+  --object-fit-default: cover;
+}
+
+/* 💻 מצב דסקטופ / נוף רחב */
+@media (orientation: landscape) and (min-width: 680px) {
+  :root {
+    --width-news-main: 52.4375rem;
+    --height-news-main: 34.625rem;
+
+    --width-news-secondary: 12.75rem;
+    --height-news-secondary: 8.75rem;
+
+    --width-gallery: 20rem;
+    --height-gallery: 21.4375rem;
+
+    --width-branches: 40rem;
+    --height-branches: 35.625rem;
+
+    --width-hero: 120rem;
+    --height-hero: 41.375rem;
+  }
+}
+
+// =============================================
+// 🎯 SIZE UTILITY CLASSES
+// =============================================
+
+// 🧩 NEWS
+.size-news-main {
+  max-width: var(--width-news-main);
+  aspect-ratio: calc(var(--width-news-main) / var(--height-news-main));
+}
+
+.size-news-secondary {
+  max-width: var(--width-news-secondary);
+  aspect-ratio: calc(var(--width-news-secondary) / var(--height-news-secondary));
+}
+
+// 🌾 GALLERY
+.size-gallery {
+  max-width: var(--width-gallery);
+  aspect-ratio: calc(var(--width-gallery) / var(--height-gallery));
+}
+
+// 🌿 BRANCHES
+.size-branches {
+  max-width: var(--width-branches);
+  aspect-ratio: calc(var(--width-branches) / var(--height-branches));
+}
+
+// 🏞️ HERO
+.size-hero {
+  max-width: var(--width-hero);
+  aspect-ratio: calc(var(--width-hero) / var(--height-hero));
+}

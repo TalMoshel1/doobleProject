@@ -1,3 +1,4 @@
+import H2Heading from "../MainHeading.tsx/h2Heading";
 import styles from "./Insurances.module.scss";
 import { IoIosArrowBack } from "react-icons/io";
 
@@ -22,12 +23,15 @@ also about the presentational !!!!
 export default function Insurances() {
   return (
     <section
-      className={styles.container}
+      className={styles.insurancesContainer}
       aria-labelledby="insured-branches-heading"
     >
-      <h2 id="insured-branches-heading" className={styles.mainHeading}>
+      {/* <h2 id="insured-branches-heading" className={styles.mainHeading}>
         ענפים מבוטחים
-      </h2>
+      </h2> */}
+
+      <H2Heading text='ענפים מבוטחים' id='Insured industries
+'/>
 
       <ul className={styles.branchesList}>
         {branches.map((branch) => (
@@ -51,7 +55,7 @@ export default function Insurances() {
 
             <img
               // src={branch.image}
-              src={"/GreenField.jpg"}
+              src={"/src/assets/GreenField.jpg"}
               alt={`תמונה מייצגת עבור ${branch.title}`}
               className={styles.branchImage}
               width="100%"

@@ -1,0 +1,162 @@
+@use "@/styles/abstracts/variables" as *;
+
+$cross-line-thickness: 0.15rem;
+
+// === צבעים וגרדיאנטים ===
+$cross-vertical-gradient: linear-gradient(
+  to bottom,
+  $color-primary-more-lighter 0%,
+  $color-primary-more-lighter 100%
+);
+
+$cross-horizontal-gradient: linear-gradient(
+  to right,
+  $color-primary-more-lighter 0%,
+  $color-primary-more-lighter 100%
+);
+
+.fastServicesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $color-theme;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  direction: rtl;
+}
+
+.heading {
+  color: $color-primary-darker;
+  font-weight: 700;
+  font-size: 2rem;
+  position: relative;
+  margin-inline-end: 0.6875rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.fastServicesHeadingContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.PreviousIconContainer {
+  height: fit-content;
+  margin-top: 0.5rem;
+}
+
+/* ✅ FLEX layout */
+.servicesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: stretch;
+  gap: 1.125rem;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  max-width: 60rem;
+  margin: 40px auto 0 auto; // יש 20px מהכותרת + 20px מהקו
+  list-style: none;
+
+  /* ✅ קו רוחבי לפני כל ה-UL */
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px; // בדיוק בין הכותרת ל-UL
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 60rem;
+    height: $cross-line-thickness;
+    background: $cross-horizontal-gradient;
+  }
+
+  /* קו אנכי באמצע, ביחס ל-gap */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: $cross-line-thickness;
+    background: $cross-vertical-gradient;
+  }
+}
+
+/* === כל item === */
+.serviceItem {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: calc(50% - 0.5625rem);
+  position: relative;
+
+  /* קו תחתון (85%) לכל פריט, חוץ מהשניים האחרונים */
+  &:not(:nth-last-child(-n + 2))::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5625rem;
+    left: 7.5%;
+    width: 85%;
+    height: $cross-line-thickness;
+    background: $cross-horizontal-gradient;
+  }
+}
+
+.serviceButton {
+  all: unset;
+  display: grid;
+  grid-template-rows: 2.1875rem auto;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.05);
+    color: $color-secondary;
+    outline: none;
+  }
+}
+
+/* ✅ fixed icon box */
+.iconWrapper {
+  width: 2.1875rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-secondary;
+  flex-shrink: 0;
+  line-height: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color-primary-darker;
+  margin-top: 1.75rem;
+  line-height: 1.4;
+  word-break: keep-all;
+  white-space: normal;
+}
+
+
+@media (orientation: landscape) and (min-width: 668px) {
+  .fastServicesSection {
+    display: none !important;
+  }
+}

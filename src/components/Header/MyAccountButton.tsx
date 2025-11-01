@@ -1,5 +1,7 @@
 import styles from "./MyAccountButton.module.scss";
 import { useI18n } from "../../context/I18nContext";
+import MyAccount from "@/assets/My-Account.svg";
+import ImageSvg from "../ui/ImageSvg/ImageSvg";
 
 type MyAccountButtonProps = {
   onClick?: () => void;
@@ -11,17 +13,12 @@ export default function MyAccountButton({
   label,
 }: MyAccountButtonProps) {
   const { t } = useI18n();
-
   const resolvedLabel = label ?? t("nav.myAccount", "My Account");
 
   return (
-    <button
-      className={styles.myAccountButton}
-      onClick={onClick}
-       role="button"
-      aria-label="my account"
-    >
-      {resolvedLabel}
+    <button className={styles.myAccountButton} onClick={onClick} type="button">
+      <span>{resolvedLabel}</span>
+      <ImageSvg src={MyAccount} alt="" aria-hidden="true" isTabIndex={false} />
     </button>
   );
 }

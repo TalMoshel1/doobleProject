@@ -1,4 +1,4 @@
-@use "../../styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables" as * ;
 
 .heroSlider {
   position: absolute;
@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-inline:auto;
+  margin-inline: auto;
 }
 
 .title {
@@ -156,7 +156,7 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
-  padding:0;
+  padding: 0;
 
   &:hover,
   &:focus {
@@ -174,10 +174,8 @@
 }
 
 @media (orientation: landscape) and (min-width: 520px) {
-
   .content {
     max-width: 62.625rem;
-
   }
   .title {
     font-size: 3.75rem;
@@ -199,7 +197,7 @@
 
 @media (orientation: landscape) and (max-width: 700px) {
   .heroSlider {
-        height: 41.375rem;
+    height: 41.375rem;
 
     // height: 90vw;
   }

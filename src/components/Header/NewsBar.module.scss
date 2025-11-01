@@ -1,4 +1,4 @@
-@use "../../styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables" as *;
 
 .newsBar {
   position: absolute;
@@ -62,7 +62,7 @@
 }
 
 .newsItem {
-  display: inline-block;
+  // display: inline-block;
   padding: 0 2rem;
   font-size: 1.125rem;
   line-height: 1;

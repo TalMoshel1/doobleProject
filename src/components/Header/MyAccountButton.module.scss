@@ -1,15 +1,26 @@
-@use "../../styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables" as *;
 
 .myAccountButton {
-  width: fit-content;
-  background-color:transparent;
-  color:white;
-  font-weight: 700;
-  font-size:1.3125rem;
-  padding: 0.25rem;
-  outline-color: transparent !important;
-   --outline-offset: $outline-offset;
-  
+  display: none;
 }
 
+@media (orientation: landscape) and (min-width: 670px) {
+  .myAccountButton {
+    width: fit-content;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3125rem;
+    padding-inline: 3.125rem;
+    outline-color: transparent !important;
+    --outline-offset: $outline-offset;
+    // margin-inline-start: 0.5625rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5625rem;
 
+    span {
+      flex-grow: 1;
+    }
+  }
+}

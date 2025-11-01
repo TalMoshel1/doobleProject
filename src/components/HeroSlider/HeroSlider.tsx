@@ -16,7 +16,7 @@ type Slide = {
 const slides: Slide[] = [
   {
     id: 1,
-    image: "/GreenField.jpg",
+    image: "/src/assets/GreenField.jpg",
     title: 'קנט - קרן לביטוח נזקי טבע בחקלאות בע"מ',
     subtitle: "כי לטבע חוקים משלו",
     description: "הגן על העסק שלך עם ביטוח של קנט",
@@ -25,7 +25,7 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    image: "/GreenField.jpg",
+    image: "/src/assets/GreenField.jpg",
     title:
       "קנט גאה לקחת חלק בעידוד דור העתיד של המחקר החקלאי בישראל",
     buttonText: "לצפייה בכתבה",

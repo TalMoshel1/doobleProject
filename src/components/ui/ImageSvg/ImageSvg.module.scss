@@ -1,0 +1,50 @@
+
+
+
+@use "@/styles/abstracts/variables" as *;
+
+.img {
+  outline-offset: $outline-offset;
+    width: var(--img-width, auto);
+  height: var(--img-height, auto);
+
+  &:hover {
+    cursor:pointer;
+  }
+}
+
+/* Define classes that map to your color variables */
+.primary {
+  outline-color: $color-primary;
+  color: $color-primary;
+}
+
+.primary-darker {
+  outline-color: $color-primary-darker;
+  color: $color-primary-darker;
+}
+
+.primary-lighter {
+  outline-color: $color-primary-lighter;
+  color:  $color-primary-lighter;
+}
+
+.primary-more-lighter {
+  outline-color: $color-primary-more-lighter;
+  color:  $color-primary-more-lighter;
+}
+
+.secondary {
+  outline-color: $color-secondary;
+  color: $color-secondary;
+}
+
+.secondary-darker {
+  outline-color: $color-secondary-darker;
+  color: $color-secondary-darker;
+}
+
+.theme {
+  outline-color: $color-theme;
+  color: $color-theme;
+}

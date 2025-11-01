@@ -1,4 +1,4 @@
-@use "../../styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables" as *;
 
 .searchBar {
   width: 100%;
@@ -6,9 +6,10 @@
   display: flex;
   justify-content: space-between;
   background-color: $color-theme !important;
-  padding-inline: 0.5rem;
-  position:relative
+  position: relative;
 }
+
+
 
 .searchInput {
   width: 100%;
@@ -33,55 +34,52 @@
 }
 
 .buttonsSearchBar {
+  position:relative;
   background-color: $color-theme;
   border: none;
   cursor: pointer;
   position: relative;
   width: fit-content;
   padding: 0;
-  padding-inline-start: 2rem;
-
+  margin-inline-start: 2.5rem;
+  // padding-inline-end: 1.1875rem;
+  margin-block-start:0.5rem;
+}
+.closeSearchContainer {
+  margin-inline-end: 2.5rem;
   &:focus {
-    /* use outline so the ring is drawn with the native outline mechanism
-       add !important as a fallback to override global outline-color rules */
+    outline: 2px solid $color-primary !important;
+    outline-offset: 2px !important;
+    border-radius: 4px;
+  }
+}
+
+.searchIconContainer {
+  padding-inline-end: 1.1875rem;
+  &:focus {
     outline: 2px solid $color-secondary !important;
     outline-offset: 2px !important;
     border-radius: 4px;
   }
 }
 
-.cleanSearch {
+.closeSearch {
   color: $color-primary;
   width: 2.65125rem;
   outline-color: transparent;
 }
 .SearchIconInBar {
   color: $color-secondary;
-  width: 2.65125rem;
   background-color: transparent !important;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-        &:focus-visible {
-          outline: 2px solid $color-secondary !important;
-          outline-offset: 2px !important;
-          border-radius: 50%;
-        }
-  
-
-
 }
 
-
 @media (orientation: landscape) {
-  .buttonsSearchBar {
-    margin-inline-start: 0.5rem;
-  }
+.searchIconContainer {
+  margin-inline-start: 3.75rem;
 
-  .searchBar {
-    padding-inline-end: 1rem;
-    padding-inline-start: 1rem;
-  }
+}
 }

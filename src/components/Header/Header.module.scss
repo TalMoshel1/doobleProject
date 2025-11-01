@@ -1,4 +1,4 @@
-@use "../../styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables" as *;
 
 .row {
   display: flex;
@@ -9,12 +9,20 @@
   display: none;
 }
 
+.searchContainer {
+  width:fit-content;
+  height:fit-content;
+  padding-block:0;
+  padding-inline:0;
+
+}
+
 .changeLanguageButtonContainer,
 .down {
   display: none;
 }
 
-@media (orientation: landscape) and (min-width: 480px) {
+@media (orientation: landscape) and (min-width: 670px) {
   .changeLanguageButtonContainer {
     color: $color-primary;
     font-weight: 700;
@@ -27,6 +35,7 @@
 
   .down {
     display: inline-block;
+    margin-inline-end: 0.625rem;
   }
   .hamburgerIconContainer {
     display: none;
@@ -41,7 +50,11 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
+  }  .myAccountButtonContainer:hover {
+    background-color: $color-secondary-darker;
   }
+
+
 }
 
 .userIcon {
@@ -149,5 +162,15 @@ header {
 @media (orientation: landscape) and (max-width: 520px) {
   .iconsContainer {
     gap: 1rem;
+  }
+
+}
+
+@media (orientation: landscape) and (min-width: 520px) {
+
+
+  .logoContainer {
+      margin-inline-start: 2.0625rem;
+
   }
 }

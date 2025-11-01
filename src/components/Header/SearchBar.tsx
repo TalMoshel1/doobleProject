@@ -1,6 +1,8 @@
 import styles from "./SearchBar.module.scss";
 import { FaSearch } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import SearchGreen from "@/assets/Search-Green.svg";
+import ImageSvg from "../ui/ImageSvg/ImageSvg";
 
 export default function SearchBar() {
   return (
@@ -8,9 +10,9 @@ export default function SearchBar() {
       <button
         type="button"
         aria-label="click to start searching"
-        className={styles.buttonsSearchBar}
+        className={styles.buttonsSearchBar + " " + styles.searchIconContainer}
       >
-        <FaSearch className={styles.SearchIconInBar} />
+        <ImageSvg src={SearchGreen} className={styles.searchGreen} />
       </button>
       <input
         className={styles.searchInput}
@@ -19,11 +21,11 @@ export default function SearchBar() {
         placeholder="מה ברצונכם לחפש?"
       />
       <button
-        className={styles.buttonsSearchBar}
+        className={styles.buttonsSearchBar + " " + styles.closeSearchContainer}
         type="button"
         aria-label="click to close search"
       >
-        <IoClose className={styles.cleanSearch} size={"2rem"} />
+        <IoClose className={styles.closeSearch} size={"2rem"} />
       </button>
     </div>
   );

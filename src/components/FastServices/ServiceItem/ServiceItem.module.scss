@@ -1,0 +1,149 @@
+@use "@/styles/abstracts/variables" as *;
+
+$cross-line-thickness: 0.15rem;
+
+// === Y axis ===
+$cross-vertical-gradient: linear-gradient(
+  to bottom,
+  $color-primary-lighter 0%,
+  $color-primary-lighter 100%
+);
+
+// === X axis ===
+$cross-horizontal-gradient: linear-gradient(
+  to right,
+  transparent 0%,
+  transparent 7.5%,
+  $color-primary-lighter 7.5%,
+  $color-primary-lighter 42.5%,
+  transparent 42.5%,
+  transparent 50%,
+  transparent 57.5%,
+  transparent 65%,
+  $color-primary-lighter 65%,
+  $color-primary-lighter 100%
+);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $color-theme;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  direction: rtl;
+}
+
+.heading {
+  color: $color-primary-darker;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.15rem solid $color-primary-more-lighter;
+  padding-bottom: 0.5rem;
+}
+
+/* ✅ GRID layout */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.125rem;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  list-style: none;
+
+  /* Horizontal line */
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% + 1rem);
+    left: 0;
+    width: 100%;
+    height: $cross-line-thickness;
+    background: $cross-horizontal-gradient;
+  }
+
+  /* Vertical line */
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% + 1rem);
+    top: 0;
+    width: $cross-line-thickness;
+    height: 100%;
+    background: $cross-vertical-gradient;
+  }
+}
+
+.serviceItem {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+}
+
+.serviceButton {
+  all: unset;
+  display: grid;
+  grid-template-rows: 2.1875rem auto;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.05);
+    color: $color-secondary;
+    outline: none;
+  }
+}
+
+/* ✅ fixed icon box */
+.iconWrapper {
+  width: 2.1875rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-secondary;
+  flex-shrink: 0;
+  line-height: 0; // removes additional line spacing from inline elements
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color-primary-darker;
+  margin-top: 1.75rem;
+  line-height: 1.4;
+  word-break: keep-all;
+  white-space: normal;
+}
+
+/* 🖥️ Landscape / Desktop refinements */
+@media (orientation: landscape) and (min-width: 668px) {
+  .servicesGrid {
+    max-width: 70%;
+    margin-inline: auto;
+  }
+
+  .serviceTitle {
+    font-size: 1.75rem;
+  }
+}
+
+

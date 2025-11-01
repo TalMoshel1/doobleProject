@@ -1,35 +1,29 @@
-@use "../../styles/abstracts/variables" as *;
-
-
+@use "@/styles/abstracts/variables" as *;
 
 .headerNavLinks {
   display: none;
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
-  
-.headerNavLinks {
-  margin-inline:3rem;
-  display:flex;
-  align-items: center ;
-  gap:4rem
-}
+  .headerNavLinks {
+    margin-inline: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
 
-.headerNavLinks a {
-
-  color: $color-primary;
-  width: fit-content;
-  font-weight: 700;
-  font-size:1.3125rem;
-  padding: 0.25rem;
-  align-content: center;;
-  // outline-color: color-navbar-icons;
-  height:fit-content;
+  .headerNavLinks a {
+    color: $color-primary;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 1.3125rem;
+    padding: 0.25rem;
+    align-content: center;
+    // outline-color: color-navbar-icons;
+    height: fit-content;
     &:focus {
-    outline-color: $color-primary;
-    --outline-offset: $outline-offset;
+      outline-color: $color-primary;
+      --outline-offset: $outline-offset;
+    }
   }
 }
-
-}
-
