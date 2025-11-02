@@ -25,7 +25,6 @@ const Image: React.FC<ImageProps> = ({
   const classes = [styles.image];
   if (size) classes.push(`size-${size}`);
 
-  // allow setting CSS custom properties via style object
   const cssVars: any = {};
 
   if (objectFit) cssVars["--object-fit"] = objectFit;

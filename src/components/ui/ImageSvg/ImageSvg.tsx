@@ -7,14 +7,8 @@ type ImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
   height?: string;    
   isTabIndex?: boolean;     
   alt?: string;
-  color?: 
-    | "theme"
-    | "primary"
-    | "primary-darker"
-    | "primary-lighter"
-    | "primary-more-lighter"
-    | "secondary"
-    | "secondary-darker";
+  color?: keyof typeof styles;
+
 };
 
 const ImageSvg: React.FC<ImageProps> = ({

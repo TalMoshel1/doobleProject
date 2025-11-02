@@ -1,13 +1,9 @@
 import styles from "./FastServices.module.scss";
 
-import Image from "../../ui/Image/Image";
-import ServiceItem from "../ServiceItem/ServiceItem";
-import SvgIcon from "../../ui/SvgIcon/SvgIcon";
 import Previous from "@/assets/Previous.svg";
 import ImageSvg from "../../ui/ImageSvg/ImageSvg";
 import services from "../Data";
 
-/* margin inline end of 11px on heading*/
 export default function FastServices() {
   return (
     <section
@@ -25,12 +21,6 @@ export default function FastServices() {
 
       <ul className={styles.servicesGrid}>
         {services.map((service) => (
-          // <ServiceItem
-          //   id={service.id}
-          //   title={service.title}
-          //   src={service.src}
-          //   alt={service.alt}
-          // />
           <li key={service.id} className={styles.serviceItem}>
             <button
               type="button"

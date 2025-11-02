@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./ServiceItem.module.scss";
-import Image from "@/components/ui/Image/Image";
 
 interface ServiceItemProps {
   id: string | number;

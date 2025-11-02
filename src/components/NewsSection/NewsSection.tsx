@@ -6,7 +6,9 @@ const newsData = [
   {
     id: 1,
     image: "/src/assets/Whats-New-First-Desktop.png",
-    title: "לוחם איספוס דולור סיט אמט קונסקקטור",
+    title: "דולור סיט אמט קונסקקטור לורם איפסום",
+    description:
+      "יצאלק םיצוחימ תילא גניסיפידא ררוטקסנוק טמא טיס רולוד םוספיא םרול",
     date: "22.08.20",
     link: "#",
     isMain: true,
@@ -14,21 +16,27 @@ const newsData = [
   {
     id: 2,
     image: "/src/assets/Whats-New-Second-Desktop.png",
-    title: "נטעי קלובר בירקנה סיטוס לפריק",
+    title: "נוסטי קלובר בריקנה סטום לפריק",
+   description:
+      "יצאלק םיצוחימ תילא גניסיפידא ררוטקסנוק טמא טיס רולוד םוספיא םרול",
     date: "22.08.20",
     link: "#",
   },
   {
     id: 3,
     image: "/src/assets/Whats-New-Third-Desktop.png",
-    title: "גול מופער סובול לוחם עביק יהל",
+    title: "נוסטי קלובר בריקנה סטום לפריק",
+   description:
+      "יצאלק םיצוחימ תילא גניסיפידא ררוטקסנוק טמא טיס רולוד םוספיא םרול",
     date: "22.08.20",
     link: "#",
   },
   {
     id: 4,
     image: "/src/assets/Whats-New-Fourth-Desktop.png",
-    title: "קודינימוס קורום בליקרה גונסיטי",
+    title: "נוסטי קלובר בריקנה סטום לפריק",
+   description:
+      "יצאלק םיצוחימ תילא גניסיפידא ררוטקסנוק טמא טיס רולוד םוספיא םרול",
     date: "22.08.20",
     link: "#",
   },
@@ -42,6 +50,9 @@ export default function NewsSection() {
     <section className={styles.newsSection} aria-label="מה חדש בקנט?">
       <div className={styles.header}>
         <h2 className={styles.title}>מה חדש בקנט?</h2>
+        <p className={styles.description}>
+          קונסקקטור אדיפיסינג אלית מייחוצ׳ים קלאצ׳י לורם איפסום דולור סיט אמט
+        </p>
         <AppButton label="לכל החדשות" to="/" color="secondary" />
       </div>
 
@@ -62,6 +73,7 @@ export default function NewsSection() {
             <div className={styles.overlay}>
               <p className={styles.date}>{mainNews.date}</p>
               <h3 className={styles.mainTitle}>{mainNews.title}</h3>
+              <p className={styles.mainDescription}>{mainNews.description}</p>
               <a href={mainNews.link} className={styles.readMore}>
                 קרא עוד
               </a>

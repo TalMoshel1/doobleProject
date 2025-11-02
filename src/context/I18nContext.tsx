@@ -52,7 +52,6 @@ export function I18nProvider({ children, defaultLocale = 'he' }: I18nProviderPro
   }, [locale, dir]);
 
   const t = (path: string, fallback = path) => {
-    // simple dot-path resolver: e.g., 'common.hello'
     const parts = path.split('.');
     let cur: any = messages;
     for (const part of parts) {

@@ -50,14 +50,10 @@ const SvgIcon: React.FC<SvgIconProps> = ({
     debug ? styles.debug : ""
   } ${className ?? ""}`.trim();
 
-  // 🧩 הגדרת רוחב/גובה inline (CSS custom properties)
-  // use `any` for CSS custom properties to avoid TS errors on indexing
   const wrapperStyle: any = {};
   if (width) wrapperStyle["--img-width"] = width;
   if (height) wrapperStyle["--img-height"] = height;
 
-  // 🧩 שכפול SVG כדי לוודא שהמחלקות שלנו בפנים
-  // clone with relaxed typing to attach aria and event handlers
   const extraProps: any = {
     className: `${children.props.className ?? ""}`.trim(),
     role: ariaLabel ? "img" : "presentation",

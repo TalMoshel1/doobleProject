@@ -8,29 +8,14 @@ import ImageSvg from "../ui/ImageSvg/ImageSvg";
 export default function AgricultureGallery() {
   return (
     <section className={styles.agricultureGallery} >
-      {/* ✅ רקע SVG מאחור */}
-
-<div className={styles.gredientColor}>
-
-
-    
-</div>
+<div className={styles.gredientColor}></div>
 <div className={styles.imageContainerWrapper}>
       <div  className={styles.imageContainer} >
-      <img src={Agriculture} className={styles.backgroundImage} 
-    //   style={{width:'375px', height:'334px'}}
-      />         
-
+      <img src={Agriculture} className={styles.backgroundImage} />         
         </div>
 </div>
-  
-   
 
-      {/* ✅ שכבת התוכן מעל */}
       <div className={styles.contentLayer}>
-
-        {/* <div className={styles.imagesWrapper}> */}
-        {/* </div> */}
 
         <div className={styles.textContent}>
           <h2 className={styles.title}>הגלריה החקלאית</h2>
@@ -42,11 +27,9 @@ export default function AgricultureGallery() {
           <div className={styles.galleryButtonContainer}>
       <AppButton label="לצפייה בגלריה" to="/" color="primary" />
           </div>
-    
         </div>
 <div >
                   <GalleryImages />
-
 </div>
 
       </div>

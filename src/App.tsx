@@ -10,6 +10,7 @@ import FastServices from "./components/FastServices/mobile/FastServices";
 import FastServicesDesktop from "./components/FastServices/desktop/FastServicesDesktop";
 import AgricultureGallery from "./components/AgricultureGallery/AgricultureGallery";
 import NewsSection from "./components/NewsSection/NewsSection";
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
@@ -23,10 +24,11 @@ function App() {
       </div>
       <FastServices />
       <Insurances />
-      {/* <FastServices />
-      <FastServicesDesktop /> */}
+      <FastServices />
+      <FastServicesDesktop /> 
       <AgricultureGallery />
       <NewsSection />
+      <Footer />
     </>
   );
 }

@@ -14,24 +14,13 @@ const branches: Branch[] = [
   { id: 3, title: "ענפים כלליים", image: "/src/assets/Plant-industries.png" },
 ];
 
-/* need to make the language rtl / ltr here below  and
-
-also about the presentational !!!!
-
-
-*/
 export default function Insurances() {
   return (
     <section
       className={styles.insurancesContainer}
       aria-labelledby="insured-branches-heading"
     >
-      {/* <h2 id="insured-branches-heading" className={styles.mainHeading}>
-        ענפים מבוטחים
-      </h2> */}
-
-      <H2Heading text='ענפים מבוטחים' id='Insured industries
-'/>
+      <H2Heading text='ענפים מבוטחים' id='Insured industries'/>
 
       <ul className={styles.branchesList}>
         {branches.map((branch) => (
@@ -58,7 +47,6 @@ export default function Insurances() {
               alt={`תמונה מייצגת עבור ${branch.title}`}
               className={styles.branchImage}
               width="100%"
-              // height='100%'
               loading="lazy"
             />
           </li>

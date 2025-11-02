@@ -36,7 +36,6 @@ const slides: Slide[] = [
 export default function HeroSlider() {
   const [current, setCurrent] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
-  // in browsers setInterval returns a number; use number | null to avoid NodeJS typings
   const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
