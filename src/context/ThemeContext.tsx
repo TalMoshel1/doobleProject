@@ -17,14 +17,12 @@ type ThemeProviderProps = {
 
 const STORAGE_KEY = 'theme';
 
-export function ThemeProvider({ children, defaultTheme }: ThemeProviderProps) {
+export function ThemeProvider({ children, defaultTheme = 'light' }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window === 'undefined') return defaultTheme ?? 'light';
+    if (typeof window === 'undefined') return defaultTheme;
     const stored = window.localStorage.getItem(STORAGE_KEY) as Theme | null;
     if (stored === 'light' || stored === 'dark') return stored;
-    if (defaultTheme) return defaultTheme;
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
+    return defaultTheme;
   });
 
   const setTheme = (next: Theme) => {
