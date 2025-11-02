@@ -16,7 +16,7 @@ type Slide = {
 const slides: Slide[] = [
   {
     id: 1,
-    image: "/src/assets/GreenField.jpg",
+    image: "/src/assets/Main-Banner-Desktop.png",
     title: 'קנט - קרן לביטוח נזקי טבע בחקלאות בע"מ',
     subtitle: "כי לטבע חוקים משלו",
     description: "הגן על העסק שלך עם ביטוח של קנט",
@@ -25,7 +25,7 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    image: "/src/assets/GreenField.jpg",
+    image: "/src/assets/Main-Banner-Desktop.png",
     title:
       "קנט גאה לקחת חלק בעידוד דור העתיד של המחקר החקלאי בישראל",
     buttonText: "לצפייה בכתבה",
@@ -36,16 +36,17 @@ const slides: Slide[] = [
 export default function HeroSlider() {
   const [current, setCurrent] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  // in browsers setInterval returns a number; use number | null to avoid NodeJS typings
+  const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (isPlaying) {
-      intervalRef.current = setInterval(() => {
+      intervalRef.current = window.setInterval(() => {
         setCurrent((prev) => (prev + 1) % slides.length);
       }, 6000);
     }
     return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
+      if (intervalRef.current !== null) window.clearInterval(intervalRef.current);
     };
   }, [isPlaying]);
 

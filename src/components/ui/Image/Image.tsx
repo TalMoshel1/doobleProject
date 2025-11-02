@@ -25,10 +25,11 @@ const Image: React.FC<ImageProps> = ({
   const classes = [styles.image];
   if (size) classes.push(`size-${size}`);
 
-  const cssVars: React.CSSProperties = {};
+  // allow setting CSS custom properties via style object
+  const cssVars: any = {};
 
-  if (objectFit) cssVars["--object-fit" as any] = objectFit;
-  cssVars["--radius" as any] = rounded ? "var(--radius-whats-new)" : "var(--radius-none)";
+  if (objectFit) cssVars["--object-fit"] = objectFit;
+  cssVars["--radius"] = rounded ? "var(--radius-whats-new)" : "var(--radius-none)";
 
   return (
     <img

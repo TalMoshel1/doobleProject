@@ -8,6 +8,8 @@ import HeroSlider from "./components/HeroSlider/HeroSlider";
 import Insurances from "./components/Insurences/Insurances";
 import FastServices from "./components/FastServices/mobile/FastServices";
 import FastServicesDesktop from "./components/FastServices/desktop/FastServicesDesktop";
+import AgricultureGallery from "./components/AgricultureGallery/AgricultureGallery";
+import NewsSection from "./components/NewsSection/NewsSection";
 function App() {
   return (
     <>
@@ -19,10 +21,12 @@ function App() {
         <NewsBar />
         <HeroSlider />
       </div>
-      {/* <FastServices /> */}
-      <Insurances />
       <FastServices />
-      <FastServicesDesktop />
+      <Insurances />
+      {/* <FastServices />
+      <FastServicesDesktop /> */}
+      <AgricultureGallery />
+      <NewsSection />
     </>
   );
 }

@@ -1,3 +1,4 @@
+import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineLightMode } from "react-icons/md";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -17,7 +18,7 @@ import Search from "@/assets/Search.svg";
 import Theme from "@/assets/Theme.svg";
 import ImageSvg from "../ui/ImageSvg/ImageSvg";
 
-export default function Header() {
+export default function Header({ children }: React.PropsWithChildren<{}>) {
   return (
     <header tabIndex={0}>
       <div className={styles.row}>
@@ -38,7 +39,7 @@ export default function Header() {
                     </SvgIcon> */}
         </div>
 
-        <Nav />
+        {children ?? <Nav />}
       </div>
 
       <div className={styles.iconsContainer}>

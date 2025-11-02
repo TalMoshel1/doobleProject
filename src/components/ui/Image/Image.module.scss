@@ -2,7 +2,8 @@
 
 .image {
   display: block;
-  width: 100%;
+  z-index:0;
+  // width: 100%;
   height: auto;
   border-radius: var(--radius, var(--radius-whats-new));
   object-fit: var(--object-fit, var(--object-fit-default));

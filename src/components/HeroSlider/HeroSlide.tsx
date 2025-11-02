@@ -1,5 +1,6 @@
 import styles from "./HeroSlider.module.scss";
 import AppButton from "../AppButton/AppButton";
+import Image from "../ui/Image/Image";
 
 type Slide = {
   id: number;
@@ -29,6 +30,14 @@ export default function HeroSlide({
       aria-hidden={ariaHidden}
     >
       <img src={slide.image} alt={slide.title} className={styles.image} />
+           {/* <Image
+        src="/src/assets/Main-Banner-Desktop.png"
+        alt="תמונה לדוגמה של באנר"
+        size="hero"
+        objectFit="cover"
+        rounded={true}
+      /> */}
+
       <div className={styles.overlay}>
         <div className={styles.content}>
           <h1 className={styles.title}>{slide.title}</h1>

@@ -9,9 +9,9 @@ type Branch = {
 };
 
 const branches: Branch[] = [
-  { id: 1, title: "ענפי הצומח", image: "/images/orange.jpg" },
-  { id: 2, title: "ענפי החי", image: "/images/cow.jpg" },
-  { id: 3, title: "ענפים כלליים", image: "/images/greenhouse.jpg" },
+  { id: 1, title: "ענפי הצומח", image: "/src/assets/Plant-industries.png" },
+  { id: 2, title: "ענפי החי", image: "/src/assets/Plant-industries.png" },
+  { id: 3, title: "ענפים כלליים", image: "/src/assets/Plant-industries.png" },
 ];
 
 /* need to make the language rtl / ltr here below  and
@@ -54,11 +54,11 @@ export default function Insurances() {
             </div>
 
             <img
-              // src={branch.image}
-              src={"/src/assets/GreenField.jpg"}
+              src={branch.image}
               alt={`תמונה מייצגת עבור ${branch.title}`}
               className={styles.branchImage}
               width="100%"
+              // height='100%'
               loading="lazy"
             />
           </li>

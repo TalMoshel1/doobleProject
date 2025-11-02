@@ -8,9 +8,9 @@ if (import.meta.env.DEV) {
   import("./styles/debug.scss");
 }
 
-import App from "./App.tsx";
-import { ThemeProvider } from "./context/ThemeContext.tsx";
-import { I18nProvider } from "./context/I18nContext.tsx";
+import App from "./App";
+import { ThemeProvider } from "./context/ThemeContext";
+import { I18nProvider } from "./context/I18nContext";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

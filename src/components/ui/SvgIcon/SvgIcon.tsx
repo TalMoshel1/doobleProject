@@ -50,18 +50,22 @@ const SvgIcon: React.FC<SvgIconProps> = ({
     debug ? styles.debug : ""
   } ${className ?? ""}`.trim();
 
-  // 🧩 הגדרת רוחב/גובה inline
-  const wrapperStyle: React.CSSProperties = {};
-  if (width) wrapperStyle.setProperty("--img-width", width);
-  if (height) wrapperStyle.setProperty("--img-height", height);
+  // 🧩 הגדרת רוחב/גובה inline (CSS custom properties)
+  // use `any` for CSS custom properties to avoid TS errors on indexing
+  const wrapperStyle: any = {};
+  if (width) wrapperStyle["--img-width"] = width;
+  if (height) wrapperStyle["--img-height"] = height;
 
   // 🧩 שכפול SVG כדי לוודא שהמחלקות שלנו בפנים
-  const clonedSvg = cloneElement(children, {
+  // clone with relaxed typing to attach aria and event handlers
+  const extraProps: any = {
     className: `${children.props.className ?? ""}`.trim(),
     role: ariaLabel ? "img" : "presentation",
-    "aria-label": ariaLabel,
+    'aria-label': ariaLabel,
     onClick,
-  });
+  };
+
+  const clonedSvg = cloneElement(children as any, extraProps);
 
   return (
     <span

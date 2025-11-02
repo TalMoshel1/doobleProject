@@ -1,0 +1,235 @@
+@use "@/styles/components/_image-sizes" as *;
+
+.gredientColor {
+  position:absolute;
+  z-index:1;
+  content:'';
+  width:100%;
+  height:100%;
+  background: linear-gradient(
+      to right,
+      rgba(249, 248, 250, 1) 0%,
+      transparent
+    );
+
+}
+
+.agricultureGallery {
+  box-sizing:border-box;
+  position: relative;
+  width: 100%;
+  // height:30rem;
+  height: fit-content;
+  // height: 62rem;
+  width: 100%;
+  flex-grow:1;
+  
+
+}
+
+.contentLayer {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  z-index:2234;
+}
+.textContent {
+  margin-inline: 2rem;
+  margin-block-end: 3rem;
+}
+
+.cardImage {
+  width: 9.58125rem;
+  height: 10.269375rem;
+}
+
+/* ✅ Added box shadow styling */
+figure {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    // transform: translateY(-0.3rem);
+    box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.22);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #333;
+  }
+}
+
+.galleryImages {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.685rem;
+  transform: translateY(25%);
+  margin-inline: auto;
+  margin-bottom: 34rem;
+}
+
+.backgroundImage {
+  // height: --height-gallery;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+
+}
+
+.firstGalleryCard {
+  transform: translateY(-25%);
+}
+
+.title {
+  color: $color-primary;
+  margin-block-start: 3.125rem;
+}
+
+.imageContainer {
+  position: relative;
+  width: 23.35rem;
+  height: 23.35rem;
+  bottom: 0;
+}
+
+
+
+.imageContainerWrapper {
+  z-index: 0;
+  position: absolute;
+  bottom: 0px;
+}
+
+.description {
+  font-weight: 400;
+  color: black;
+  line-height: 2.25rem;
+  margin-block-end: 1.875rem;
+}
+
+.cardImage {
+  width: 9.58125rem;
+  height: 10.269375rem;
+}
+
+@media (orientation: landscape) and (max-width: 680px) {
+
+  .agricultureGallery {
+    height:468.11px
+  }
+  // .backgroundImage {
+  //   width: 50%;
+  // }
+  .backgroundImage {
+  // height: 67svh;  
+}
+
+  .galleryImages {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 680px) {
+    .agricultureGallery {
+    height:468.11px
+  }
+    .backgroundImage {
+  height: 100vh;  
+}
+  .galleryImages {
+    margin-inline: 0;
+    margin-block: 0;
+    transform: translateY(37.5%);
+    margin-bottom: 0;
+  }
+
+  .textContent {
+    width: 30vw;
+  }
+
+  .imageContainerWrapper {
+    left: 0;
+  }
+  .imageContainer {
+    position: relative;
+    // width: 23.35rem;
+    // height: 23.35;
+    bottom: 0;
+    right: 0;
+  }
+  .contentLayer {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .agricultureGallery {
+    height: fit-content;
+  }
+
+.backgroundImage {
+  height: var(--height-gallery);
+  width:100vw;
+  z-index: 0;
+  left: 0;
+  bottom:0;
+  position: absolute;
+}
+
+  .cardImage {
+    width: 15vw;
+    height: 30svh;
+  }
+
+  .firstGalleryCard {
+  }
+}
+
+
+@media(orientation: landscape) {
+.gredientColor {
+//  height:420.11px;
+ 
+
+}
+.backgroundImage {
+  height: var(--height-gallery);
+  z-index: 0;
+  left: 0;
+  // top: 50%;
+  width: 375px;
+  height:334px;
+  position: absolute;
+}
+}
+
+@media(orientation:portrait) {
+  .imageContainer {
+    width: 100vw;
+    flex-grow:1;
+  }
+
+    .backgroundImage {
+      width:100%;
+      height:100%;
+    }
+}
