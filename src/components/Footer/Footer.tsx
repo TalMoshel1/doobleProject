@@ -1,6 +1,6 @@
 import styles from "./Footer.module.scss";
 import AppButton from "../AppButton/AppButton";
-import Logo from "/src/assets/Kanat-Logo-White.svg";
+import Logo from "/Kanat-Logo-White.svg";
 import {
   FaFacebookF,
   FaTwitter,
@@ -18,12 +18,24 @@ export default function Footer() {
         <div className={styles.brandColumn}>
           <img src={Logo} alt="קנט" className={styles.logo} />
           <div className={styles.socials}>
-            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="#" aria-label="Twitter"><FaTwitter /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="YouTube"><FaYoutube /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
-            <a href="#" aria-label="Telegram"><FaTelegramPlane /></a>
+            <a href="#" aria-label="Facebook">
+              <FaFacebookF />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <FaTwitter />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="#" aria-label="YouTube">
+              <FaYoutube />
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <FaLinkedinIn />
+            </a>
+            <a href="#" aria-label="Telegram">
+              <FaTelegramPlane />
+            </a>
           </div>
         </div>
 
@@ -31,10 +43,18 @@ export default function Footer() {
         <div className={styles.linksColumn}>
           <h3 className={styles.columnTitle}>מידע כללי</h3>
           <ul>
-            <li><a href="#">ארכיון חוזי בטיחות</a></li>
-            <li><a href="#">פניות הציבור</a></li>
-            <li><a href="#">הצהרת חופש המידע</a></li>
-            <li><a href="#">אמנת שירות</a></li>
+            <li>
+              <a href="#">ארכיון חוזי בטיחות</a>
+            </li>
+            <li>
+              <a href="#">פניות הציבור</a>
+            </li>
+            <li>
+              <a href="#">הצהרת חופש המידע</a>
+            </li>
+            <li>
+              <a href="#">אמנת שירות</a>
+            </li>
           </ul>
         </div>
 
@@ -55,14 +75,14 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className={styles.bottomBar}>
         <div className={styles.bottomBarRight}>
-   <p>כל הזכויות שמורות לקנט ©2021</p>
-        <div className={styles.bottomLinks}>
-          <a href="#">מפת אתר</a>
-          <a href="#">תנאי שימוש ופרטיות</a>
-          <a href="#">הצהרת נגישות</a>
+          <p>כל הזכויות שמורות לקנט ©2021</p>
+          <div className={styles.bottomLinks}>
+            <a href="#">מפת אתר</a>
+            <a href="#">תנאי שימוש ופרטיות</a>
+            <a href="#">הצהרת נגישות</a>
+          </div>
         </div>
-        </div>
-     
+
         <span className={styles.credit}>dooble</span>
       </div>
     </footer>

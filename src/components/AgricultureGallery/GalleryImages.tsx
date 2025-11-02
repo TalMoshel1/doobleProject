@@ -1,4 +1,3 @@
-import Image from "../ui/Image/Image";
 import styles from "./AgricultureGallery.module.scss";
 
 export default function GalleryImages() {
@@ -7,7 +6,7 @@ export default function GalleryImages() {
       <figure className={styles.galleryCard + " " + styles.firstGalleryCard}>
         <img
           className={styles.cardImage}
-          src="/src/assets/Asher-Golan-Photo-Desktop.png"
+          src="/Asher-Golan-Photo-Desktop.png"
           alt="צילום: אשר גולן"
         />
         <figcaption>צילום: אשר גולן</figcaption>
@@ -16,7 +15,7 @@ export default function GalleryImages() {
       <figure className={styles.galleryCard}>
         <img
           className={styles.cardImage}
-          src="/src/assets/Bina-Cohen_Picture-Desktop.png"
+          src="/Bina-Cohen_Picture-Desktop.png"
           alt="צילום: בינה כהן"
         />
         <figcaption>צילום: בינה כהן</figcaption>

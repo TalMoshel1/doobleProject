@@ -1,6 +1,6 @@
 import ImageSvg from "../ui/ImageSvg/ImageSvg";
 import styles from "./LanguageButton.module.scss";
-import Down from "@/assets/Down.svg";
+import Down from "/Down.svg";
 
 export default function LanguageButton() {
   return (

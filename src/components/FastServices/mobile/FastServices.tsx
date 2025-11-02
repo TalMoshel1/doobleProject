@@ -1,6 +1,6 @@
 import styles from "./FastServices.module.scss";
 
-import Previous from "@/assets/Previous.svg";
+import Previous from "/Previous.svg";
 import ImageSvg from "../../ui/ImageSvg/ImageSvg";
 import services from "../Data";
 

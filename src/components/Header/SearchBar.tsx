@@ -1,7 +1,7 @@
 import styles from "./SearchBar.module.scss";
 import { FaSearch } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import SearchGreen from "@/assets/Search-Green.svg";
+import SearchGreen from "/Search-Green.svg";
 import ImageSvg from "../ui/ImageSvg/ImageSvg";
 
 export default function SearchBar() {

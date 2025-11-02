@@ -1,5 +1,5 @@
 import styles from "./FastServicesDesktop.module.scss";
-import Previous from "@/assets/Previous.svg";
+import Previous from "/Previous.svg";
 import ImageSvg from "@/components/ui/ImageSvg/ImageSvg";
 import services from "../Data"; // ✅ ייבוא הנתונים
 

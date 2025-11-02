@@ -8,7 +8,7 @@ type Slide = {
   image: string;
   title: string;
   subtitle?: string;
-  description?:string;
+  description?: string;
   buttonText: string;
   link: string;
 };
@@ -16,7 +16,7 @@ type Slide = {
 const slides: Slide[] = [
   {
     id: 1,
-    image: "/src/assets/Main-Banner-Desktop.png",
+    image: "/Main-Banner-Desktop.png",
     title: 'קנט - קרן לביטוח נזקי טבע בחקלאות בע"מ',
     subtitle: "כי לטבע חוקים משלו",
     description: "הגן על העסק שלך עם ביטוח של קנט",
@@ -25,9 +25,8 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    image: "/src/assets/Main-Banner-Desktop.png",
-    title:
-      "קנט גאה לקחת חלק בעידוד דור העתיד של המחקר החקלאי בישראל",
+    image: "/Main-Banner-Desktop.png",
+    title: "קנט גאה לקחת חלק בעידוד דור העתיד של המחקר החקלאי בישראל",
     buttonText: "לצפייה בכתבה",
     link: "#",
   },
@@ -45,7 +44,8 @@ export default function HeroSlider() {
       }, 6000);
     }
     return () => {
-      if (intervalRef.current !== null) window.clearInterval(intervalRef.current);
+      if (intervalRef.current !== null)
+        window.clearInterval(intervalRef.current);
     };
   }, [isPlaying]);
 
@@ -67,15 +67,14 @@ export default function HeroSlider() {
       ))}
 
       <div className={styles.controlsContainer}>
-        
-              <button
+        <button
           type="button"
           className={styles.pauseButton}
           aria-label={isPlaying ? "עצור מעבר אוטומטי" : "הפעל מעבר אוטומטי"}
           onClick={togglePlay}
         >
           {isPlaying ? (
-            <FiPauseCircle className={styles.pauseIcon}  />
+            <FiPauseCircle className={styles.pauseIcon} />
           ) : (
             <FiPlayCircle className={styles.pauseIcon} />
           )}
@@ -97,8 +96,6 @@ export default function HeroSlider() {
             />
           ))}
         </div>
-
-  
       </div>
     </section>
   );

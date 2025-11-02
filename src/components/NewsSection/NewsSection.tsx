@@ -5,7 +5,7 @@ import NewsCard from "./NewsCard";
 const newsData = [
   {
     id: 1,
-    image: "/src/assets/Whats-New-First-Desktop.png",
+    image: "/Whats-New-First-Desktop.png",
     title: "דולור סיט אמט קונסקקטור לורם איפסום",
     description:
       "יצאלק םיצוחימ תילא גניסיפידא ררוטקסנוק טמא טיס רולוד םוספיא םרול",
@@ -15,27 +15,27 @@ const newsData = [
   },
   {
     id: 2,
-    image: "/src/assets/Whats-New-Second-Desktop.png",
+    image: "/Whats-New-Second-Desktop.png",
     title: "נוסטי קלובר בריקנה סטום לפריק",
-   description:
+    description:
       "יצאלק םיצוחימ תילא גניסיפידא ררוטקסנוק טמא טיס רולוד םוספיא םרול",
     date: "22.08.20",
     link: "#",
   },
   {
     id: 3,
-    image: "/src/assets/Whats-New-Third-Desktop.png",
+    image: "/Whats-New-Third-Desktop.png",
     title: "נוסטי קלובר בריקנה סטום לפריק",
-   description:
+    description:
       "יצאלק םיצוחימ תילא גניסיפידא ררוטקסנוק טמא טיס רולוד םוספיא םרול",
     date: "22.08.20",
     link: "#",
   },
   {
     id: 4,
-    image: "/src/assets/Whats-New-Fourth-Desktop.png",
+    image: "/Whats-New-Fourth-Desktop.png",
     title: "נוסטי קלובר בריקנה סטום לפריק",
-   description:
+    description:
       "יצאלק םיצוחימ תילא גניסיפידא ררוטקסנוק טמא טיס רולוד םוספיא םרול",
     date: "22.08.20",
     link: "#",

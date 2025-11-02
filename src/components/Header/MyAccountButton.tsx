@@ -1,6 +1,6 @@
 import styles from "./MyAccountButton.module.scss";
 import { useI18n } from "../../context/I18nContext";
-import MyAccount from "@/assets/My-Account.svg";
+import MyAccount from "/My-Account.svg";
 import ImageSvg from "../ui/ImageSvg/ImageSvg";
 
 type MyAccountButtonProps = {

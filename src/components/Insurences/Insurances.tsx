@@ -9,9 +9,9 @@ type Branch = {
 };
 
 const branches: Branch[] = [
-  { id: 1, title: "ענפי הצומח", image: "/src/assets/Plant-industries.png" },
-  { id: 2, title: "ענפי החי", image: "/src/assets/Plant-industries.png" },
-  { id: 3, title: "ענפים כלליים", image: "/src/assets/Plant-industries.png" },
+  { id: 1, title: "ענפי הצומח", image: "/Plant-industries.png" },
+  { id: 2, title: "ענפי החי", image: "/Plant-industries.png" },
+  { id: 3, title: "ענפים כלליים", image: "/Plant-industries.png" },
 ];
 
 export default function Insurances() {
@@ -20,7 +20,7 @@ export default function Insurances() {
       className={styles.insurancesContainer}
       aria-labelledby="insured-branches-heading"
     >
-      <H2Heading text='ענפים מבוטחים' id='Insured industries'/>
+      <H2Heading text="ענפים מבוטחים" id="Insured industries" />
 
       <ul className={styles.branchesList}>
         {branches.map((branch) => (

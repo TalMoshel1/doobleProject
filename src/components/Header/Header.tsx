@@ -4,8 +4,8 @@ import styles from "./Header.module.scss";
 import MyAccountButton from "./MyAccountButton";
 import LanguageButton from "./LanguageButton";
 import Nav from "../Nav/Nav";
-import Search from "@/assets/Search.svg";
-import Theme from "@/assets/Theme.svg";
+import Search from "/Search.svg";
+import Theme from "/Theme.svg";
 import ImageSvg from "../ui/ImageSvg/ImageSvg";
 
 export default function Header({ children }: React.PropsWithChildren<{}>) {
@@ -13,11 +13,7 @@ export default function Header({ children }: React.PropsWithChildren<{}>) {
     <header tabIndex={0}>
       <div className={styles.row}>
         <div className={styles.logoContainer}>
-          <ImageSvg
-            src={"/src/assets/Kanat-Logo.svg"}
-            tabIndex={-1}
-            alt="קנט"
-          />
+          <ImageSvg src={"/Kanat-Logo.svg"} tabIndex={-1} alt="קנט" />
         </div>
 
         {children ?? <Nav />}
